@@ -1,3 +1,9 @@
+# [Демо](http://tjbulick.github.io/liis-test)
+
+## Инструкции
+
+`$ npm run deploy` - задеплоить на github pages
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,9 +1,9 @@
 import React from 'react';
 import './RegisterButton.css';
 
-function RegisterButton() {
+function RegisterButton(props) {
     return (
-        <button className="register-button">Register</button>
+        <button className="register-button" type="submit" onClick={props.onSubmit}>Register</button>
     )
 }
 
