@@ -12,13 +12,17 @@ export default class FirebaseService {
             messagingSenderId: "739295187595",
             appId: "1:739295187595:web:1f4e9b004bc96c4af7ba8e"
         };
-        // firebase.initializeApp(this.firebaseConfig);
-
-        this.usersRef = firebase.database().ref('users/');
+        firebase.initializeApp(this.firebaseConfig);
+        this.db = firebase.firestore();
     }
 
-    writeUserData = async () => {
-        console.log('hello from writeUserData method')
-        console.log(this.usersRef)
+    writeUserData = async (user) => {
+        return await this.db.collection('users').add(user)
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
     }
 }
