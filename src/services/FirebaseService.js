@@ -12,11 +12,11 @@ export default class FirebaseService {
             messagingSenderId: "739295187595",
             appId: "1:739295187595:web:1f4e9b004bc96c4af7ba8e"
         };
-        firebase.initializeApp(this.firebaseConfig);
+        // firebase.initializeApp(this.firebaseConfig);
 
         this.usersRef = firebase.database().ref('users/');
     }
-    
+
     writeUserData = async () => {
         console.log('hello from writeUserData method')
         console.log(this.usersRef)
