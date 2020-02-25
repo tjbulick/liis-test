@@ -1,5 +1,10 @@
 # [Демо](http://tjbulick.github.io/liis-test)
 
+todo:
+1. убрать ненужные комментарии из кода
+2. исправить warning'и
+3. перечитать всю кодовую базу
+
 ## Инструкции
 
 `$ npm run deploy` - задеплоить на github pages

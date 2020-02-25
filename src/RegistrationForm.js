@@ -3,8 +3,9 @@ import './RegistrationForm.css';
 import FormInput from './FormInput';
 import RegisterButton from './RegisterButton';
 import FirebaseService from './services/FirebaseService';
+import { connect } from 'react-redux';
 
-class RegisterForm extends React.Component {
+class RegistrationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,6 +30,7 @@ class RegisterForm extends React.Component {
     event.preventDefault();
     
     // get values from state and send them as object to firebase
+    // this is a side-effect
     this.firebaseService.writeUserData({
       firstName: this.state.firstName,
       secondName: this.state.secondName,
@@ -57,4 +59,10 @@ class RegisterForm extends React.Component {
   }
 }
 
-export default RegisterForm;
+const mapStateToProps = (state) => {
+  return {}
+};
+
+// const mapDispatchToProps = 
+
+export default connect(mapStateToProps)(RegistrationForm);
