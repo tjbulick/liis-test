@@ -6,7 +6,7 @@ function FormInput(props) {
         <div>
             <span className="input-label">{props.label}</span>
             <br/>
-            <input type="text" className="form-input" name={props.name} onChange={props.onChange} />
+            <input type="text" value={props.value} className="form-input" name={props.name} onChange={props.onChange} />
         </div>
     )
 }
