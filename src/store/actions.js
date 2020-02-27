@@ -1,4 +1,3 @@
-export const SUCCESSFUL_REGISTRATION = 'SUCCESSFUL_REGISTRATION';
 export const CHANGE_FORM_INPUT = 'CHANGE_FORM_INPUT';
 
 // action creator for input change events
