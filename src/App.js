@@ -2,8 +2,9 @@ import React from 'react';
 import './App.css';
 import RegistrationForm from './RegistrationForm';
 import rocketImage from './rocket.jpg';
+import { connect } from 'react-redux';
 
-function App() {
+function App(props) {
     return (
         <div className="app">
             <RegistrationForm />
@@ -12,4 +13,10 @@ function App() {
     )
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        isRegistred: state.isRegistred,
+    }
+};
+
+export default connect(mapStateToProps)(App);
