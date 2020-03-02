@@ -18,11 +18,11 @@ export default class FirebaseService {
 
     writeUserData = async (user) => {
         return await this.db.collection('users').add(user)
-        .then(function(docRef) {
-            console.log("Document written with ID: ", docRef.id);
-        })
-        .catch(function(error) {
-            console.error("Error adding document: ", error);
-        });
+        // .then(function(docRef) {
+        //     console.log("Document written with ID: ", docRef.id);
+        // })
+        // .catch(function(error) {
+        //     console.error("Error adding document: ", error);
+        // });
     }
 }

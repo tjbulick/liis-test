@@ -2,16 +2,11 @@ import React from 'react';
 import './RegistrationForm.css';
 import FormInput from './FormInput';
 import RegisterButton from './RegisterButton';
-import FirebaseService from './services/FirebaseService';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { createInputChangeAction } from './store/actions';
+import { createInputChangeAction, createFormSubmitAction } from './store/actions';
 
 class RegistrationForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.firebaseService = new FirebaseService();
-  }
 
   handleInputChange = (event) => {
     const { changeFormInput } = this.props;
@@ -21,15 +16,8 @@ class RegistrationForm extends React.Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     
-    // get values from state and send them as object to firebase
-    // this is a side-effect
-    this.firebaseService.writeUserData({
-      firstName: this.props.firstName,
-      secondName: this.props.secondName,
-      username: this.props.username,
-      email: this.props.email,
-      phone: this.props.phone,
-    });
+    const { submitForm } = this.props;
+    submitForm();
   }
 
   render() {
@@ -58,6 +46,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     changeFormInput: bindActionCreators(createInputChangeAction, dispatch),
+    submitForm: bindActionCreators(createFormSubmitAction, dispatch),
   };
 };
 
