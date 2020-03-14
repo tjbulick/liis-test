@@ -4,7 +4,7 @@ import RegistrationForm from './RegistrationForm';
 import rocketImage from './rocket.jpg';
 import { connect } from 'react-redux';
 
-function App(props) {
+const App = () => {
     return (
         <div className="app">
             <RegistrationForm />

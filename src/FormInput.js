@@ -1,7 +1,7 @@
 import React from 'react';
 import './FormInput.css';
 
-function FormInput(props) {
+const FormInput = (props) => {
     return (
         <div>
             <span className="input-label">{props.label}</span>
