@@ -9,3 +9,11 @@
     border-width: 0;
     margin-top: 15px;
 }
+
+.register-button:focus {
+    outline: none;
+}
+
+.register-button:hover {
+    cursor: pointer;
+}
