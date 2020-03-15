@@ -35,7 +35,9 @@ const RegistrationForm = (props) => {
       <FormInput label="Username" name="username" value={props.username} onChange={handleInputChange} />
       <FormInput label="Email" name="email" value={props.email} onChange={handleInputChange} />
       <FormInput label="Phone Number" name="phone" value={props.phone} onChange={handleInputChange} />
-      <RegisterButton onSubmit={handleSubmit} />
+      <div className="button-wrapper">
+        <RegisterButton onSubmit={handleSubmit} />
+      </div>
     </form>
   )
 }
