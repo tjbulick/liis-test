@@ -1,16 +1,20 @@
 .form-input {
     border: 0;
     outline: 0;
-    border-bottom: 1.5px solid rgb(105, 150, 158);
-    font-size: large;
+    border-bottom: 1px solid rgb(105, 150, 158);
+    font-size: 16px;
     transition: border-bottom 0.2s linear;
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 .form-input:focus {
-    border-bottom: 1.5px solid rgb(27, 43, 52);
+    border-bottom: 1px solid rgb(27, 43, 52);
 }
 
 .input-label {
     color: rgb(94, 94, 94);
+}
+
+.input-block {
+    margin-bottom: 20px;
 }
