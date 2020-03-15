@@ -24,7 +24,7 @@ const RegistrationForm = (props) => {
   return (
     <form className="registration-form">
       <div className="branding">
-        <img src="logo" alt="" />
+        <i className="fas fa-layer-group"></i>
         <span><i><b>your</b>text</i></span>
       </div>
       <h1>Registration Form</h1>
