@@ -1,4 +1,4 @@
-import { CHANGE_FORM_INPUT } from './actions';
+import { CHANGE_FORM_INPUT, REGISTRATION_SUCCEEDED } from './actions';
 
 const initialState = {
     isRegistred: false,
@@ -17,6 +17,8 @@ export function rootReducer(state = initialState, action) {
             const newState = { ...state };
             newState.registrationFormFields[action.inputName] = action.payload;
             return newState
+        case REGISTRATION_SUCCEEDED:
+            return { ...state, isRegistred: true };
         default:
             return state
     }

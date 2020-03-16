@@ -1,6 +1,6 @@
 export const CHANGE_FORM_INPUT = 'CHANGE_FORM_INPUT';
 export const FORM_SUBMIT = 'FORM_SUBMIT';
-const REGISTRATION_SUCCEEDED = 'REGISTRATION_SUCCEEDED';
+export const REGISTRATION_SUCCEEDED = 'REGISTRATION_SUCCEEDED';
 
 // action creator for input change events
 export const createInputChangeAction = (event) => {
